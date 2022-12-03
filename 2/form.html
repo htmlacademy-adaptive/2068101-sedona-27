@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона</title>
   <base href="https://htmlacademy-adaptive.github.io/2068101-sedona-27/2/">
 </head>
-<body>
+<body class="page__body">
 <header class="main-header">
-  <a class="main-header__logo">
+  <a class="main-header__logo" href="index.html">
     <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
   </a>
-  <nav class="main-nav">
+  <nav class="main-header__main-nav">
     <button class="main-nav_toggle" type="button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--current">
-          <a>Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a>Фото и видео</a>
-        </li>
-        <li class="site-list__item">
-          <a>Форма отзыва</a>
-        </li>
-        <li class="site-list__item">
-          <a>HTML Academy</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item">
+        <a class="site-list__link" href="index.html">Главная</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="#">Фото и видео</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link site-list__link--current" href="form.html">Форма отзыва</a>
+      </li>
+      <li class="site-list__item">
+        <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
+      </li>
+    </ul>
   </nav>
 </header>
 <main class="main-container">
   <section class="hero">
     <h1 class="visually-hidden">Отзыв о Седоне.</h1>
-    <div class="hero__logo">
-      <img class="welcome-hero__logo-image" src="img/hero-sedona.svg" width="229" height="39" alt="Седона.">
-    </div>
+    <img class="welcome-hero__logo-image" src="img/hero-sedona.svg" width="229" height="39" alt="Седона.">
   </section>
   <section class="feedback">
     <h2 class="feedback__title">Оставьте свой отзыв</h2>
@@ -133,33 +129,27 @@
   </section>
 </main>
 <footer class="main-footer">
-  <div class="main-footer__wrapper">
-    <div class="main-footer__hashtag">
-      <a class="main-footer__link-hashtag" href="">#visitsedona</a>
-    </div>
-    <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte">
-            <span class="visually-hidden">Мы в Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram">
-            <span class="visually-hidden">Мы в Телеграме</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube">
-            <span class="visually-hidden">Мы в Ютубе</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-footer__copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
-    </div>
+  <a class="main-footer__link-hashtag" href="">#visitsedona</a>
+  <ul class="main-footer__social social">
+    <li class="social__item">
+      <a class="social__link social__link-vkontakte">
+        <span class="visually-hidden">Мы в Вконтакте</span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link-telegram">
+        <span class="visually-hidden">Мы в Телеграме</span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link-youtube">
+        <span class="visually-hidden">Мы в Ютубе</span>
+      </a>
+    </li>
+  </ul>
+  <div class="main-footer__copyright copyright">
+    <p class="copyright__text">Разработано</p>
+    <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
   </div>
 </footer>
 </body>
