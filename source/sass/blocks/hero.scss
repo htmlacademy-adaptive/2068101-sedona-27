@@ -1,0 +1,12 @@
+.hero {
+  background-image: url("../../img/background/background-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 52px 0 67px 0;
+  background-color: $blue;
+}
+
+.hero__logo-image {
+  display: block;
+  margin: 0 auto;
+}
