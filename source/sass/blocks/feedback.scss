@@ -7,7 +7,7 @@
   line-height: 26px;
   font-weight: 700;
   text-align: center;
-  color: #000000;
+  color: $dark-black;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 24px;
@@ -31,7 +31,7 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: $dark-black;
   margin-bottom: 20px;
 }
 
@@ -43,7 +43,7 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: $dark-black;
 }
 
 .feedback__radio {
@@ -58,15 +58,16 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: $dark-black;
 }
 
 .textarea__input {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #f2f2f2;
+  color: $dark-black;
+  opacity: 0.3;
+  background-color: $light-grey;
 
 }
 
