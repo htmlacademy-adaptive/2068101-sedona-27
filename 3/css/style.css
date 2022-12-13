@@ -2,14 +2,14 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/ptsans.woff2") format("woff2"), url("../../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/ptsansbold.woff2") format("woff2"), url("../../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
   font-display: swap;
 }
 *,
@@ -20,7 +20,7 @@
 
 img {
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .visually-hidden {
@@ -41,7 +41,7 @@ img {
 .page__body {
   margin: 0;
   height: 100%;
-  font-family: "PT sans, sans-serif";
+  font-family: "PT sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -69,7 +69,7 @@ img {
 }
 
 .hero-inner {
-  background-image: url("../../img/background/background-welcome.jpg");
+  background-image: url("../img/background/background-welcome.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 90px 0 85px 0;
@@ -188,7 +188,7 @@ img {
 }
 
 .hero {
-  background-image: url("../../img/background/background-hero.jpg");
+  background-image: url("../img/background/background-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 52px 0 67px 0;
@@ -267,7 +267,8 @@ img {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.3);
+  color: #000000;
+  opacity: 0.3;
   background-color: #f2f2f2;
 }
 
