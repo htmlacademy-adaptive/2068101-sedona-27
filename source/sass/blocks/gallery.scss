@@ -1,0 +1,53 @@
+.gallery__header {
+  padding: 37px 20px 25px;
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: $dark-black;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.gallery__subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gallery__item {
+  list-style: none;
+  padding: 24px 20px 25px;
+}
+
+.gallery__card-image {
+  margin-bottom: 15px;
+}
+
+.gallery__card-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $dark-black;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.gallery__card-author {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.gallery__card-likes-amount {
+  font-weight: 700;
+  color: $dark-black;
+  text-transform: uppercase;
+}

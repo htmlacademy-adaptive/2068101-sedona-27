@@ -1,0 +1,31 @@
+.page-search {
+  padding: 38px 29px 49px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-search__title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $dark-black;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.page-search__subitem {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.page-search__hotel {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 16px 49px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $white;
+  background-color: $blue;
+  text-decoration: none;
+}
