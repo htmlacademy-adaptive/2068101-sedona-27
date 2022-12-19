@@ -2,6 +2,7 @@
 <html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона | Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,7 +12,7 @@
     <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
   </a>
   <nav class="main-header__main-nav main-nav">
-    <button class="main-nav_toggle" type="button">
+    <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
     <ul class="main-nav__list">
@@ -19,10 +20,10 @@
         <a class="main-nav__link" href="index.html">Главная</a>
       </li>
       <li class="main-nav__item">
-        <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+        <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
       </li>
       <li class="main-nav__item">
-        <a class="main-nav__link main-nav__link--current" href="form.html">Форма отзыва</a>
+        <a class="main-nav__link" href="form.html">Форма отзыва</a>
       </li>
       <li class="main-nav__item">
         <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
@@ -42,9 +43,9 @@
         политике и экономике.</p>
     </div>
     <ul class="gallery__list">
-      <li class="gallery__item">
-        <a class="gallery__card-image" href="img/gallery/spaces.jpg">
-          <img src="img/gallery/spaces.jpg" width="280" height="280" alt="Неродные просторы.">
+      <li class="gallery__item gallery__item--row">
+        <a class="gallery__card-link" href="img/gallery/spaces.jpg">
+          <img class="gallery__card-image" src="img/gallery/spaces.jpg" width="280" height="280" alt="Неродные просторы.">
         </a>
         <h3 class="gallery__card-name">Неродные просторы</h3>
         <p class="gallery__card-author">Автор фото: Борис</p>
@@ -55,8 +56,8 @@
         <span class="gallery__card-likes-amount">1350</span>
       </li>
       <li class="gallery__item">
-        <a class="gallery__card-image" href="img/gallery/vegatation.jpg">
-          <img src="img/gallery/vegatation.jpg" width="280" height="280" alt="Местная растительность.">
+        <a class="gallery__card-link" href="img/gallery/vegatation.jpg">
+          <img class="gallery__card-image" src="img/gallery/vegatation.jpg" width="280" height="280" alt="Местная растительность.">
         </a>
         <h3 class="gallery__card-name">Местная растительность</h3>
         <p class="gallery__card-author">Автор фото: Сергей</p>
@@ -67,8 +68,8 @@
         <span class="gallery__card-likes-amount">143</span>
       </li>
       <li class="gallery__item">
-        <a class="gallery__card-image" href="img/gallery/road.jpg">
-          <img src="img/gallery/road.jpg" width="280" height="280" alt="Дорога на север.">
+        <a class="gallery__card-link" href="img/gallery/road.jpg">
+          <img class="gallery__card-image" src="img/gallery/road.jpg" width="280" height="280" alt="Дорога на север.">
         </a>
         <h3 class="gallery__card-name">Дорога на север</h3>
         <p class="gallery__card-author">Автор фото: Петр</p>
@@ -79,8 +80,8 @@
         <span class="gallery__card-likes-amount">96</span>
       </li>
       <li class="gallery__item">
-        <a class="gallery__card-image" href="img/gallery/bridge.jpg">
-          <img src="img/gallery/bridge.jpg" width="280" height="280" alt="Мост дьявола.">
+        <a class="gallery__card-link" href="img/gallery/bridge.jpg">
+          <img class="gallery__card-image" src="img/gallery/bridge.jpg" width="280" height="280" alt="Мост дьявола.">
         </a>
         <h3 class="gallery__card-name">Дорога на север</h3>
         <p class="gallery__card-author">Автор фото: Антон</p>

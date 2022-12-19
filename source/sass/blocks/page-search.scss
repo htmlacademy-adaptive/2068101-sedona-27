@@ -1,7 +1,15 @@
 .page-search {
-  padding: 38px 29px 49px;
+  padding: 38px 18px 49px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 155px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 61px 371px 66px;
+  }
 }
 
 .page-search__title {
@@ -11,11 +19,23 @@
   color: $dark-black;
   margin: 0;
   margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
-.page-search__subitem {
+.page-search__subtitle {
   margin: 0;
   margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .page-search__hotel {
@@ -28,4 +48,8 @@
   color: $white;
   background-color: $blue;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 121px;
+  }
 }

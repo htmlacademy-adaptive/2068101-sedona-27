@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона | Главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,7 +12,7 @@
     <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
   </a>
   <nav class="main-header__main-nav main-nav">
-    <button class="main-nav__tooggle" type="button">
+    <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
     <ul class="main-nav__list">
@@ -42,12 +43,14 @@
     </div>
     <Ol class="advantages__list">
       <li class="advantages__item">
-        <div class="advantages__item--big">
-          <h3 class="advantages__title advantages__title--white">Настоящий городок</h3>
-          <p class="advantages__number advantages__number--white">№1</p>
-          <p class="advantages__description advantages__description--white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        <div class="advantages__item--row">
+          <div class="advantages__item--big">
+            <h3 class="advantages__title advantages__title--white">Настоящий городок</h3>
+            <p class="advantages__number advantages__number--white">№1</p>
+            <p class="advantages__description advantages__description--white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+          <img class="advantages__image" src="img/photo-city.jpg" width="320" height="260ы" alt="Городок Седона на фоне гор.">
         </div>
-        <img class="advantages__photo-city" src="img/photo-city.jpg" width="320" height="260ы" alt="Городок Седона на фоне гор.">
         <ul class="advantages__sublist sublist">
           <li class="sublist__item">
             <h3 class="sublist__title">Жилье</h3>
@@ -64,19 +67,22 @@
         </ul>
       </li>
       <li class="advantages__item">
-        <div class="advantages__item--big">
-          <h3 class="advantages__title advantages__title--white">Тут есть мост дьявола</h3>
-          <p class="advantages__number advantages__number--white">№2</p>
-          <p class="advantages__description advantages__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <div class="advantages__item--row">
+          <div class="advantages__item--big">
+            <h3 class="advantages__title advantages__title--white">Тут есть мост дьявола</h3>
+            <p class="advantages__number advantages__number--white">№2</p>
+            <p class="advantages__description advantages__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
+          <img class="advantages__image advantages__image--reverse" src="img/photo-city.jpg" width="320" height="260"
+               alt="Городок Седона на фоне гор.">
         </div>
-        <img class="advantages__photo-bridge" src="img/photo-city.jpg" width="320" height="260" alt="Городок Седона на фоне гор.">
       </li>
       <li class="advantages__item advantages__item--grey">
         <h3 class="advantages__title">Небольшая площадь</h3>
         <p class="advantages__number">№3</p>
         <p class="advantages__description">Все интересные места находятся очень близко</p>
       </li>
-      <li class="advantages__item advantages__item--grey">
+      <li class="advantages__item advantages__item--grey advantages__item--decoration-text">
         <h3 class="advantages__title">Красивая дорога</h3>
         <p class="advantages__number">№4</p>
         <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
@@ -90,13 +96,13 @@
   </section>
   <section class="page-search">
     <h2 class="page-search__title">Заинтересовались?</h2>
-    <p class="page-search__subitem">
-      Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
+    <p class="page-search__subtitle">
+      Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
     </p>
-    <a class="page-search__hotel button" href="#">Поиск гостиницы в Седоне</a>
+    <a class="page-search__hotel button" href="#">Найти гостиницу</a>
   </section>
-  <div class="search-map">
-    <img src="img/map-mobile.jpg" width="320" height="350" alt="Карта.">
+  <div class="map">
+    <img class="map__image" src="img/map-mobile.jpg" width="320" height="350" alt="Карта.">
   </div>
 </main>
 <footer class="main-footer">

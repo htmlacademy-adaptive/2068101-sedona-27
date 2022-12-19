@@ -1,6 +1,15 @@
 .sublist__item {
   list-style: none;
   padding: 23px 18px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 153px 33px 60px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 169px 50px 69px;
+  }
 }
 
 .sublist__title {
