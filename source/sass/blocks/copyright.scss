@@ -1,7 +1,26 @@
+.copyright {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    align-items: center;
+  }
+}
+
+
 .copyright__text {
+  display: block;
   color: $dark-black;
+  margin: 0;
+  margin-right: 12px;
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
 }
