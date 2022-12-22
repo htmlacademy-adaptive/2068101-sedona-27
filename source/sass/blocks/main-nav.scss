@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+
 }
 
 .main-nav__list {
@@ -27,14 +28,12 @@
   text-align: center;
   padding: 17px 12px 12px 12px;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 
 
   @media (min-width: $tablet-width) {
     color: $dark-black;
-    padding: 18px 24px 17px 29px;
+    padding: 18px 24px 17px 25px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -53,6 +52,10 @@
 
 .main-nav__item {
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+  }
 }
 
 .main-nav__item:nth-child(3n+3) {
