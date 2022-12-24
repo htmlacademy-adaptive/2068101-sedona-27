@@ -2,8 +2,16 @@
   background-image: url("../img/background/background-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 52px 0 67px 0;
+  padding: 52px 0 67px;
   background-color: $blue;
+
+  @media (min-width: $tablet-width) {
+    padding: 95px 0 117px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 101px 0 120px;
+  }
 }
 
 .hero__logo-image {
