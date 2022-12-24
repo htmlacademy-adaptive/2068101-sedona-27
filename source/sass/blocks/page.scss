@@ -3,8 +3,7 @@
 }
 
 .page__body {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   height: 100%;
   font-family: $main-fonts;
   font-size: 14px;
@@ -12,4 +11,9 @@
   font-weight: 400;
   color: $black;
   background-color: $white;
+}
+
+.page__container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
