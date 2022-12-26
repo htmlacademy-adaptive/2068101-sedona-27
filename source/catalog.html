@@ -12,24 +12,26 @@
     <a class="main-header__logo" href="index.html">
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
     </a>
-    <nav class="main-header__main-nav main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Форма отзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
-        </li>
-      </ul>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="main-container">
@@ -48,49 +50,57 @@
           <a class="gallery__card-link" href="img/gallery/spaces.jpg">
             <img class="gallery__card-image" src="img/gallery/spaces.jpg" width="280" height="280" alt="Неродные просторы.">
           </a>
-          <h3 class="gallery__card-name">Неродные просторы</h3>
-          <p class="gallery__card-author">Автор фото: Борис</p>
-          <div class="gallery__card-likes">
-            <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
-            <span class="visually-hidden">Количество лайков.</span>
+          <div class="gallery__card-wrapper">
+            <h3 class="gallery__card-name">Неродные просторы</h3>
+            <p class="gallery__card-author">Автор фото: Борис</p>
+            <div class="gallery__card-likes">
+              <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
+              <span class="visually-hidden">Количество лайков.</span>
+            </div>
+            <span class="gallery__card-likes-amount">1350</span>
           </div>
-          <span class="gallery__card-likes-amount">1350</span>
         </li>
         <li class="gallery__item">
           <a class="gallery__card-link" href="img/gallery/vegatation.jpg">
             <img class="gallery__card-image" src="img/gallery/vegatation.jpg" width="280" height="280" alt="Местная растительность.">
           </a>
-          <h3 class="gallery__card-name">Местная растительность</h3>
-          <p class="gallery__card-author">Автор фото: Сергей</p>
-          <div class="gallery__card-likes">
-            <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
-            <span class="visually-hidden">Количество лайков.</span>
+          <div class="gallery__card-wrapper">
+            <h3 class="gallery__card-name">Местная растительность</h3>
+            <p class="gallery__card-author">Автор фото: Сергей</p>
+            <div class="gallery__card-likes">
+              <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
+              <span class="visually-hidden">Количество лайков.</span>
+            </div>
+            <span class="gallery__card-likes-amount">143</span>
           </div>
-          <span class="gallery__card-likes-amount">143</span>
         </li>
         <li class="gallery__item">
           <a class="gallery__card-link" href="img/gallery/road.jpg">
             <img class="gallery__card-image" src="img/gallery/road.jpg" width="280" height="280" alt="Дорога на север.">
           </a>
-          <h3 class="gallery__card-name">Дорога на север</h3>
-          <p class="gallery__card-author">Автор фото: Петр</p>
-          <div class="gallery__card-likes">
-            <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
-            <span class="visually-hidden">Количество лайков.</span>
+          <div class="gallery__card-wrapper">
+            <h3 class="gallery__card-name">Дорога на север</h3>
+            <p class="gallery__card-author">Автор фото: Петр</p>
+            <div class="gallery__card-likes">
+              <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
+              <span class="visually-hidden">Количество лайков.</span>
+            </div>
+            <span class="gallery__card-likes-amount">96</span>
           </div>
-          <span class="gallery__card-likes-amount">96</span>
         </li>
         <li class="gallery__item">
           <a class="gallery__card-link" href="img/gallery/bridge.jpg">
             <img class="gallery__card-image" src="img/gallery/bridge.jpg" width="280" height="280" alt="Мост дьявола.">
           </a>
-          <h3 class="gallery__card-name">Дорога на север</h3>
-          <p class="gallery__card-author">Автор фото: Антон</p>
-          <div class="gallery__card-likes">
-            <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
-            <span class="visually-hidden">Количество лайков.</span>
+          <div class="gallery__card-wrapper">
+            <h3 class="gallery__card-name">Дорога на север</h3>
+            <p class="gallery__card-author">Автор фото: Антон</p>
+            <div class="gallery__card-likes">
+              <button class="gallery__card-likes-button" aria-label="Мне нравится."></button>
+              <span class="visually-hidden">Количество лайков.</span>
+            </div>
+            <span class="gallery__card-likes-amount">254</span>
           </div>
-          <span class="gallery__card-likes-amount">254</span>
         </li>
       </ul>
     </section>
@@ -154,5 +164,6 @@
     </div>
   </footer>
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>

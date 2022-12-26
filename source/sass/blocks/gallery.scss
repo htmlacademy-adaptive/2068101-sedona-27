@@ -46,6 +46,10 @@
   list-style: none;
   padding: 24px 20px 25px;
 
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $silver;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
   }
@@ -54,6 +58,16 @@
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.gallery__item:nth-child(1) {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $silver;
   }
 }
 
@@ -72,6 +86,10 @@
   color: $dark-black;
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
 
 .gallery__card-author {
@@ -79,8 +97,65 @@
   margin-bottom: 16px;
 }
 
+.gallery__card-likes {
+
+}
+
 .gallery__card-likes-amount {
   font-weight: 700;
   color: $dark-black;
   text-transform: uppercase;
+  padding-left: 37px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.gallery__card-likes-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    col
+  }
+}
+
+.gallery__card-likes-button::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/icons/like.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/icons/like-white.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.gallery__card-wrapper {
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: ;
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($dark-black, 0.3);
+    color: $white;
+  }
 }
