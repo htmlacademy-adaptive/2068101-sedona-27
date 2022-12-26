@@ -64,6 +64,9 @@
   margin: 0;
   padding: 24px 20px;
 
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $silver;
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -102,6 +105,10 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -230,15 +237,82 @@
 .feedback__label {
   display: block;
   text-transform: uppercase;
-  padding-left: 16px;
 
+  &--phone {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 21px;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $silver;
+      background-image: url("../img/icons/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 21px;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $silver;
+      background-image: url("../img/icons/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
-.feedback__control-label {
+.feedback__label-control {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback__control-mark {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: $light-grey;
+}
+
+.feedback__input-checkbox + .feedback__control-mark {
+  border-radius: 4px;
+}
+
+.feedback__input-radio + .feedback__control-mark {
+  border-radius: 50%;
+}
+
+.feedback__input-checkbox:checked + .feedback__control-mark {
+  background-image: url("../img/icons/checkbox-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__input-radio:checked + .feedback__control-mark {
+  background-image: url("../img/icons/radio-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__control-text {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $dark-black;
+  padding-left: 62px;
 }
 
 .feedback__input {
@@ -252,7 +326,7 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    padding: 16px;
+
   }
 
   @media (min-width: $desktop-width) {

@@ -39,6 +39,7 @@
 
 .advantages__item {
   list-style: none;
+  position: relative;
 
   &--grey {
     background-color: $grey;
@@ -62,6 +63,18 @@
     @media (min-width: $desktop-width) {
       padding: 52px 50px 51px;
     }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .advantages__item--border-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 1px;
+    background-color: $silver;
   }
 }
 
