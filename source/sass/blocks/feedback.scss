@@ -11,6 +11,7 @@
 }
 
 .feedback__title {
+  position: relative;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -23,10 +24,38 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
     margin-bottom: 20px;
+
+    &--border::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 123px;
+      height: 1px;
+      background-color: $light-silver;
+    }
+
+    &--border::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 123px;
+      height: 1px;
+      background-color: $light-silver;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 35px;
+
+    &--border::before {
+      width: 280px;
+    }
+
+    &--border::after {
+      width: 280px;
+    }
   }
 }
 
@@ -75,6 +104,10 @@
   }
 }
 
+.feedback__item:first-child {
+  border-right: 1px solid $light-silver;
+}
+
 .feedback__item-name {
 
 
@@ -112,19 +145,6 @@
   }
 }
 
-.feedback__item-emotion {
-
-  @media (min-width: $desktop-width) {
-    padding: 0 96px;
-  }
-}
-
-.feedback__item-impression {
-
-  @media (min-width: $tablet-width) {
-
-  }
-}
 
 .feedback__radio {
   list-style: none;
@@ -218,7 +238,7 @@
   }
 }
 
-.feedback__legend {
+.feedback__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -226,6 +246,7 @@
   text-transform: uppercase;
   color: $dark-black;
   padding: 0;
+  margin: 0;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -324,6 +345,7 @@
   border: none;
   background-color: $light-grey;
   width: 100%;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
 
@@ -345,6 +367,16 @@
   padding: 16px 16px;
   border: 0;
   width: 100%;
+  height: 150px;
+
+  @media (min-width: $tablet-width) {
+    height: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 96px;
+    width: 768px;
+  }
 }
 
 

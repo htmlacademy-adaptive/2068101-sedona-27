@@ -37,7 +37,9 @@
   <main class="main-container">
     <section class="hero">
       <h1 class="visually-hidden">Отзыв о Седоне.</h1>
-      <img class="hero__logo-image" src="img/hero-sedona.svg" width="229" height="39" alt="Седона.">
+      <div class="hero__background">
+        <img class="hero__logo-image" src="img/hero-sedona.svg" width="229" height="39" alt="Седона.">
+      </div>
     </section>
     <section class="feedback">
       <div class="feedback__inner">
@@ -47,7 +49,7 @@
       </div>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="feedback__item feedback__item-name">
-          <legend class="feedback__legend">Представьтесь:</legend>
+          <h3 class="feedback__title">Представьтесь:</h3>
           <label class="feedback__label" for="name">Имя*:</label>
           <input class="feedback__input" type="text" name="name" id="name" value="Пётр" required>
           <label class="feedback__label" for="surname">Фамилия*:</label>
@@ -56,7 +58,7 @@
           <input class="feedback__input" type="text" name="middle-name" id="middle-name" value="Викторович">
         </fieldset>
         <fieldset class="feedback__item feedback__item-contact">
-          <legend class="feedback__legend">Контактная информация:</legend>
+          <h3 class="feedback__title">Контактная информация:</h3>
           <div class="feedback__item-contact-wrapper">
             <label class="feedback__label feedback__label--phone" for="phone">Контактный телефон*:</label>
             <input class="feedback__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
@@ -65,7 +67,7 @@
           </div>
         </fieldset>
         <fieldset class="feedback__item feedback__item-impression">
-          <legend class="feedback__legend">Ваше общее впечатление:</legend>
+          <h3 class="feedback__title feedback__title--border">Ваше общее впечатление:</h3>
           <ul class="feedback__list-radio">
             <li class="feedback__radio">
               <label class="feedback__label feedback__label-control">
@@ -91,7 +93,7 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__item feedback__item-attraction">
-          <legend class="feedback__legend">Посещенные достопримечательности:</legend>
+          <h3 class="feedback__title feedback__title--border">Посещенные<br> достопримечательности:</h3>
           <ul class="feedback__list-checkbox">
             <li class="feedback__checkbox">
               <label class="feedback__label feedback__label-control">
@@ -124,7 +126,7 @@
           </ul>
         </fieldset>
         <fieldset class="feedback__item feedback__item-emotion">
-          <legend class="feedback__legend feedback">Опишите свои эмоции:</legend>
+          <h3 class="feedback__title feedback__title--border">Опишите свои эмоции:</h3>
           <label class="feedback__label" for="textarea-field"></label>
           <textarea class="feedback__textarea" id="textarea-field" name="emotions" placeholder="Опишите подробно все свои восторги"
                     rows="4"></textarea>
