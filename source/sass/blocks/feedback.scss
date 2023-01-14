@@ -161,12 +161,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 36px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 17px 53px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 17px 0 25px;
   }
 }
 
@@ -192,12 +194,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 84px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 31px 44px 28px;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 64px;
+    padding: 31px 0 28px;
   }
 }
 
@@ -229,6 +233,23 @@
   padding: 16px 10px;
   width: 100%;
 
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $blue-active;
+  }
+
+  &:disabled {
+    background-color: $dark-grey;
+  }
+
   @media (min-width: $tablet-width) {
     width: 50%;
   }
@@ -251,7 +272,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    margin-bottom: 28px;
+    margin-bottom: 38px;
   }
 }
 
@@ -328,6 +349,21 @@
   background-position: center;
 }
 
+.feedback__input-checkbox:hover + .feedback__control-mark,
+.feedback__input-radio:hover + .feedback__control-mark {
+  background-color: $dark-grey;
+}
+
+.feedback__input-checkbox:focus + .feedback__control-mark,
+.feedback__input-radio:focus + .feedback__control-mark {
+  background-color: $dark-grey;
+}
+
+.feedback__input-checkbox:active + .feedback__control-mark,
+.feedback__input-radio:active + .feedback__control-mark {
+  background-color: $grey-active;
+}
+
 .feedback__control-text {
   font-size: 18px;
   line-height: 26px;
@@ -347,12 +383,18 @@
   width: 100%;
   margin-bottom: 16px;
 
-  @media (min-width: $tablet-width) {
-
+  &:hover {
+    background-color: $dark-grey;
   }
 
-  @media (min-width: $desktop-width) {
+  &:focus {
+    background-color: $dark-grey;
+    outline: none;
+  }
 
+  &:active {
+    background-color: $light-grey;
+    box-shadow: inset 0 0 0 4px $dark-grey;
   }
 }
 
@@ -365,9 +407,23 @@
   opacity: 0.3;
   background-color: $light-grey;
   padding: 16px 16px;
-  border: 0;
   width: 100%;
   height: 150px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $dark-grey;
+  }
+
+  &:focus {
+    background-color: $dark-grey;
+  }
+
+  &:active {
+    background-color: $light-grey;
+    box-shadow: inset 0 0 0 4px $dark-grey;
+  }
 
   @media (min-width: $tablet-width) {
     height: 160px;

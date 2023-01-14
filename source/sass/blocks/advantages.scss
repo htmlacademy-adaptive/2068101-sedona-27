@@ -74,16 +74,17 @@
 
 @media (max-width: $mobile-width-only) {
 
-  .advantages__big--triangle::after {
+  .advantages__intro--triangle::after {
     position: absolute;
     content: "";
     background-image: url("../img/white-triangle.svg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: bottom center;
     background-size: cover;
     height: 37px;
     width: 100%;
-    top: -16px;
+    bottom: -26px;
+    right: 0;
     left: 0;
   }
 

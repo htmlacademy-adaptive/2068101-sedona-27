@@ -49,6 +49,23 @@
   background-color: $blue;
   text-decoration: none;
 
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $blue-active;
+  }
+
+  &:disabled {
+    background-color: $dark-grey;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 16px 121px;
   }
