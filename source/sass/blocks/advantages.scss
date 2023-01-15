@@ -1,4 +1,5 @@
 .advantages__intro {
+  position: relative;
   padding: 32px 18px;
 
   @media (min-width: $tablet-width) {
@@ -8,6 +9,11 @@
   @media (min-width: $desktop-width) {
     padding: 59px 358px 44px;
   }
+}
+
+.advantages__intro::after {
+
+  z-index: 1;
 }
 
 .description__title {
@@ -39,6 +45,7 @@
 
 .advantages__item {
   list-style: none;
+  position: relative;
 
   &--grey {
     background-color: $grey;
@@ -65,7 +72,37 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+
+  .advantages__intro--triangle::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/white-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    height: 37px;
+    width: 100%;
+    bottom: -26px;
+    right: 0;
+    left: 0;
+  }
+
+
+  .advantages__item--border-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 1px;
+    background-color: $silver;
+  }
+}
+
 .advantages__wrapper {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -84,6 +121,7 @@
     padding: 52px 50px 51px;
   }
 }
+
 
 .advantages__title {
   font-size: 18px;

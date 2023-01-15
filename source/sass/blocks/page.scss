@@ -3,7 +3,9 @@
 }
 
 .page__body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   height: 100%;
   font-family: $main-fonts;
   font-size: 14px;

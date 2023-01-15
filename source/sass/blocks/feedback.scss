@@ -11,6 +11,7 @@
 }
 
 .feedback__title {
+  position: relative;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -23,10 +24,38 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
     margin-bottom: 20px;
+
+    &--border::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 123px;
+      height: 1px;
+      background-color: $light-silver;
+    }
+
+    &--border::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 123px;
+      height: 1px;
+      background-color: $light-silver;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 35px;
+
+    &--border::before {
+      width: 280px;
+    }
+
+    &--border::after {
+      width: 280px;
+    }
   }
 }
 
@@ -64,12 +93,19 @@
   margin: 0;
   padding: 24px 20px;
 
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $silver;
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
     margin-bottom: 48px;
     padding: 0;
   }
+}
+
+.feedback__item:first-child {
+  border-right: 1px solid $light-silver;
 }
 
 .feedback__item-name {
@@ -103,21 +139,12 @@
   @media (min-width: $tablet-width) {
     margin-left: 18px;
   }
-}
-
-.feedback__item-emotion {
 
   @media (min-width: $desktop-width) {
-    padding: 0 96px;
+    margin: 0;
   }
 }
 
-.feedback__item-impression {
-
-  @media (min-width: $tablet-width) {
-
-  }
-}
 
 .feedback__radio {
   list-style: none;
@@ -134,12 +161,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 36px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 17px 53px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 17px 0 25px;
   }
 }
 
@@ -165,12 +194,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 84px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 31px 44px 28px;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 64px;
+    padding: 31px 0 28px;
   }
 }
 
@@ -202,6 +233,23 @@
   padding: 16px 10px;
   width: 100%;
 
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $blue-active;
+  }
+
+  &:disabled {
+    background-color: $dark-grey;
+  }
+
   @media (min-width: $tablet-width) {
     width: 50%;
   }
@@ -211,7 +259,7 @@
   }
 }
 
-.feedback__legend {
+.feedback__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -219,26 +267,109 @@
   text-transform: uppercase;
   color: $dark-black;
   padding: 0;
+  margin: 0;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    margin-bottom: 28px;
+    margin-bottom: 38px;
   }
 }
 
 .feedback__label {
   display: block;
   text-transform: uppercase;
-  padding-left: 16px;
 
+  &--phone {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 21px;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $silver;
+      background-image: url("../img/icons/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 21px;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $silver;
+      background-image: url("../img/icons/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
-.feedback__control-label {
+.feedback__label-control {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback__control-mark {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: $light-grey;
+}
+
+.feedback__input-checkbox + .feedback__control-mark {
+  border-radius: 4px;
+}
+
+.feedback__input-radio + .feedback__control-mark {
+  border-radius: 50%;
+}
+
+.feedback__input-checkbox:checked + .feedback__control-mark {
+  background-image: url("../img/icons/checkbox-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__input-radio:checked + .feedback__control-mark {
+  background-image: url("../img/icons/radio-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__input-checkbox:hover + .feedback__control-mark,
+.feedback__input-radio:hover + .feedback__control-mark {
+  background-color: $dark-grey;
+}
+
+.feedback__input-checkbox:focus + .feedback__control-mark,
+.feedback__input-radio:focus + .feedback__control-mark {
+  background-color: $dark-grey;
+}
+
+.feedback__input-checkbox:active + .feedback__control-mark,
+.feedback__input-radio:active + .feedback__control-mark {
+  background-color: $grey-active;
+}
+
+.feedback__control-text {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $dark-black;
+  padding-left: 62px;
 }
 
 .feedback__input {
@@ -250,13 +381,20 @@
   border: none;
   background-color: $light-grey;
   width: 100%;
+  margin-bottom: 16px;
 
-  @media (min-width: $tablet-width) {
-    padding: 16px;
+  &:hover {
+    background-color: $dark-grey;
   }
 
-  @media (min-width: $desktop-width) {
+  &:focus {
+    background-color: $dark-grey;
+    outline: none;
+  }
 
+  &:active {
+    background-color: $light-grey;
+    box-shadow: inset 0 0 0 4px $dark-grey;
   }
 }
 
@@ -269,8 +407,32 @@
   opacity: 0.3;
   background-color: $light-grey;
   padding: 16px 16px;
-  border: 0;
   width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $dark-grey;
+  }
+
+  &:focus {
+    background-color: $dark-grey;
+  }
+
+  &:active {
+    background-color: $light-grey;
+    box-shadow: inset 0 0 0 4px $dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 96px;
+    width: 768px;
+  }
 }
 
 
