@@ -16,13 +16,12 @@
 .modal-successfully__wrapper {
   position: relative;
   margin: auto;
-  padding: 45px 40px 35px 40px;
   text-align: center;
   background-color: $white;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    width: 400px;
-    padding: 50px 47px 49px;
+    width: 640px;
   }
 }
 
@@ -44,21 +43,18 @@
   line-height: 21px;
   font-weight: 400;
   color: $black;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 
 .modal-successfully__button {
   display: block;
   font: inherit;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   text-decoration: none;
@@ -67,9 +63,15 @@
   background-color: $blue;
   border: none;
   outline: none;
-  padding: 18px 63px 14px;
+  padding: 18px 61px 14px;
   margin: 0 auto;
-  min-width: 180px;
+  min-width: 280px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    min-width: 458px;
+    padding: 18px 140px 14px 139px;
+  }
 
   &:hover {
     background-color: $blue-hover;
@@ -86,5 +88,26 @@
 
   &:disabled {
     background-color: $dark-grey;
+  }
+}
+
+.modal-successfully__content {
+  padding: 39px 38px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 53px 98px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 51px 98px 28px;
+  }
+}
+
+.modal-successfully__button-wrapper {
+  padding: 20px;
+  background-color: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 91px;
   }
 }
