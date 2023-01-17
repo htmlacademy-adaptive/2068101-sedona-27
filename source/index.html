@@ -37,9 +37,7 @@
   <main class="main-container">
     <section class="hero-inner">
       <h1 class="visually-hidden">Добро пожаловать в Седону.</h1>
-      <div class="hero-inner__background">
-        <img class="hero-inner__logo-image" src="img/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
-      </div>
+      <img class="hero-inner__logo-image" src="img/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
     </section>
     <section class="advantages">
       <header class="advantages__intro advantages__intro--triangle">
@@ -54,7 +52,12 @@
               <p class="advantages__number advantages__number--white">- №1 -</p>
               <p class="advantages__description advantages__description--white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantages__image" src="img/photo-city.jpg" width="320" height="260" alt="Городок Седона на фоне гор.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/index/photo-city-desktop.jpg 1x, img/index/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/photo-city-tablet.jpg 1x, img/index/photo-city-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/index/photo-city-mobile.jpg" srcset="img/index/photo-city-mobile@2x.jpg 2x" width="320"
+                   height="260" alt="Городок Седона на фоне гор.">
+            </picture>
           </div>
           <ul class="advantages__sublist sublist">
             <li class="sublist__item sublist__item--house">
@@ -72,28 +75,33 @@
           </ul>
         </li>
         <li class="advantages__item">
-          <div class="advantages__wrapper">
+          <div class="advantages__wrapper advantages__wrapper--reverse">
             <div class="advantages__big">
               <h3 class="advantages__title advantages__title--white">Тут есть мост дьявола</h3>
               <p class="advantages__number advantages__number--white">- №2 -</p>
               <p class="advantages__description advantages__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__image advantages__image--reverse" src="img/photo-city.jpg" width="320" height="260"
-                 alt="Городок Седона на фоне гор.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/index/photo-bridge-desktop.jpg 1x, img/index/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/photo-bridge-tablet.jpg 1x, img/index/photo-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/index/photo-bridge-mobile.jpg"
+                   srcset="img/index/photo-bridge-mobile@2x.jpg 2x"
+                   alt="Городок Седона на фоне гор.">
+            </picture>
           </div>
         </li>
         <li class="advantages__item advantages__item--grey advantages__item--border-line">
-          <h3 class="advantages__title">Небольшая площадь</h3>
+          <h3 class="advantages__title">Небольшая <br class="advantages__transfer"> площадь</h3>
           <p class="advantages__number">- №3 -</p>
           <p class="advantages__description">Все интересные места находятся очень близко</p>
         </li>
         <li class="advantages__item advantages__item--grey advantages__item--decoration-text advantages__item--border-line">
-          <h3 class="advantages__title">Красивая дорога</h3>
+          <h3 class="advantages__title">Красивая <br class="advantages__transfer"> дорога</h3>
           <p class="advantages__number">- №4 -</p>
           <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="advantages__item advantages__item--grey">
-          <h3 class="advantages__title">Мало туристов</h3>
+          <h3 class="advantages__title">Мало <br class="advantages__transfer"> туристов</h3>
           <p class="advantages__number">- №5 -</p>
           <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
         </li>

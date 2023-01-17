@@ -12,10 +12,12 @@
   line-height: 21px;
   font-weight: 400;
   color: $black;
-  background-color: $white;
+  background-color: $light-grey;
 }
 
 .page__container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0 5px 15px rgba($shadow-black, 0.2);
 }
