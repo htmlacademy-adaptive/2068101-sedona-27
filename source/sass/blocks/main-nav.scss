@@ -25,7 +25,7 @@
   color: $white;
   text-transform: uppercase;
   text-align: center;
-  padding: 17px 12px 12px 12px;
+  padding: 16px 12px 11px 12px;
   text-decoration: none;
   display: block;
   border-top: 1px solid $light-blue;
@@ -73,6 +73,10 @@
   }
 
   &--current {
+
+    @media (max-width: $mobile-width-only) {
+      background-color: $background-grey;
+    }
 
     @media (min-width: $tablet-width) {
       color: $brown;
