@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона | Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
 <div class="page__container">
@@ -49,7 +53,7 @@
       </div>
       <ul class="gallery__list">
         <li class="gallery__item gallery__item--row">
-          <a class="gallery__card-link" href="img/gallery/spaces-desktop.jpg.jpg">
+          <a class="gallery__card-link" href="img/gallery/spaces-desktop.jpg">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/gallery/spaces-desktop.jpg 1x, img/gallery/spaces-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/gallery/spaces-tablet.jpg 1x, img/gallery/spaces-tablet@2x.jpg 2x">
@@ -162,9 +166,9 @@
       <div class="video__player">
         <button class="video__button" type="button">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/gallery/video-desktop.jpg 1x, img/gallery/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/gallery/video-tablet.jpg 1x, img/gallery/video-tablet@2x.jpg 2x">
-            <img src="img/gallery/video-mobile.jpg" srcset="img/gallery/video-mobile@2x.jpg 2x" alt="Видеопрезентация.">
+            <source media="(min-width: 1200px)" srcset="img/gallery/video-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/gallery/video-tablet.jpg">
+            <img src="img/gallery/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
           </picture>
           <span class="visually-hidden">Возспроизвести презентацию.</span>
         </button>
