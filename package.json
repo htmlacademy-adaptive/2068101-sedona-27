@@ -49,7 +49,6 @@
   },
   "type": "module",
   "dependencies": {
-    "browser-sync": "^2.27.10",
     "fix-path": "^3.0.0",
     "node-fetch": "^2.6.7"
   }

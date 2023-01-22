@@ -21,7 +21,8 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
@@ -29,17 +30,17 @@ export const styles = () => {
 }
 
 // HTML
-const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'));
 }
 
 // Scripts
 const scripts = () => {
   return gulp.src('source/js/*.js')
-    .pipe(browser.stream())
-    .pipe(gulp.dest('build/js'))
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
 }
 
 // Image
@@ -51,7 +52,7 @@ const optimizeImages = () => {
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg.png}')
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/img'))
 }
 
 //WebP
@@ -67,7 +68,7 @@ const createWebp = () => {
 const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
@@ -121,7 +122,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
