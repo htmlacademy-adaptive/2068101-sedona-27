@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона | Фото и видео</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
@@ -48,13 +48,19 @@
     <section class="gallery">
       <div class="gallery__header">
         <h2 class="gallery__title">Фото и видео</h2>
-        <p class="gallery__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+        <p class="gallery__subtitle">Не можете решиться на путешествие из-за курса?&nbsp;<br
+          class="gallery__transfer"/> Фотографии помогут вам забыть о
           политике и экономике.</p>
       </div>
       <ul class="gallery__list">
         <li class="gallery__item gallery__item--row">
-          <a class="gallery__card-link" href="img/gallery/spaces-desktop.jpg">
+          <a class="gallery__card-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                      srcset="img/gallery/spaces-desktop.webp 1x, img/gallery/spaces-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/gallery/spaces-tablet.webp 1x, img/gallery/spaces-tablet@2x.webp  2x">
+              <source type="image/webp" srcset="img/gallery/spaces-mobile.webp 1x, img/gallery/spaces-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/gallery/spaces-desktop.jpg 1x, img/gallery/spaces-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/gallery/spaces-tablet.jpg 1x, img/gallery/spaces-tablet@2x.jpg 2x">
               <img class="gallery__card-image" src="img/gallery/spaces-mobile.jpg" srcset="img/gallery/spaces-mobile@2x.jpg 2x"
@@ -68,9 +74,8 @@
             </div>
             <div class="gallery__card-likes">
               <button class="gallery__card-likes-button" type="button" aria-label="Мне нравится.">
-                <svg class="gallery__card-likes-svg" xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none">
-                  <path
-                    d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
+                <svg class="gallery__card-likes-svg" width="23" height="21" fill="none">
+                  <use href="img/sprite.svg#icon-like"/>
                 </svg>
               </button>
               <span class="visually-hidden">Количество лайков.</span>
@@ -79,8 +84,13 @@
           </div>
         </li>
         <li class="gallery__item">
-          <a class="gallery__card-link" href="img/gallery/vegatation.jpg">
+          <a class="gallery__card-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                      srcset="img/gallery/vegatation-desktop.webp 1x, img/gallery/vegatation-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/gallery/vegatation-tablet.webp 1x, img/gallery/vegatation-tablet@2x.webp  2x">
+              <source type="image/webp" srcset="img/gallery/vegatation-mobile.webp 1x, img/gallery/vegatation-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/gallery/vegatation-desktop.jpg 1x, img/gallery/vegatation-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/gallery/vegatation-tablet.jpg 1x, img/gallery/vegatation-tablet@2x.jpg 2x">
               <img class="gallery__card-image" src="img/gallery/vegatation-mobile.jpg" srcset="img/gallery/vegatation-mobile@2x.jpg 2x"
@@ -94,10 +104,8 @@
             </div>
             <div class="gallery__card-likes">
               <button class="gallery__card-likes-button" type="button" aria-label="Мне нравится.">
-                <svg class="gallery__card-likes-svg" xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none">
-                  <path
-                    d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"
-                  />
+                <svg class="gallery__card-likes-svg" width="23" height="21" fill="none">
+                  <use href="img/sprite.svg#icon-like"/>
                 </svg>
               </button>
               <span class="visually-hidden">Количество лайков.</span>
@@ -106,11 +114,17 @@
           </div>
         </li>
         <li class="gallery__item">
-          <a class="gallery__card-link" href="img/gallery/road.jpg">
+          <a class="gallery__card-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                      srcset="img/gallery/road-desktop.webp 1x, img/gallery/road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/gallery/road-desktop.webp 1x, img/gallery/road-desktop@2x.webp  2x">
+              <source type="image/webp" srcset="img/gallery/road-desktop.webp 1x, img/gallery/road-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/gallery/road-desktop.jpg 1x, img/gallery/road-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/gallery/road-tablet.jpg 1x, img/gallery/road-tablet@2x.jpg 2x">
-              <img class="gallery__card-image" src="img/gallery/road-mobile.jpg" srcset="img/gallery/road-mobile@2x.jpg 2x" alt="Дорога на север.">
+              <img class="gallery__card-image" src="img/gallery/road-mobile.jpg" srcset="img/gallery/road-mobile@2x.jpg 2x"
+                   alt="Дорога на север.">
             </picture>
           </a>
           <div class="gallery__card-content gallery__card-content--smoke">
@@ -120,10 +134,8 @@
             </div>
             <div class="gallery__card-likes">
               <button class="gallery__card-likes-button" type="button" aria-label="Мне нравится.">
-                <svg class="gallery__card-likes-svg" xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none">
-                  <path
-                    d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"
-                  />
+                <svg class="gallery__card-likes-svg" width="23" height="21" fill="none">
+                  <use href="img/sprite.svg#icon-like"/>
                 </svg>
               </button>
               <span class="visually-hidden">Количество лайков.</span>
@@ -132,11 +144,17 @@
           </div>
         </li>
         <li class="gallery__item">
-          <a class="gallery__card-link" href="img/gallery/bridge.jpg">
+          <a class="gallery__card-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                      srcset="img/gallery/bridge-desktop.webp 1x, img/gallery/bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/gallery/bridge-desktop.webp 1x, img/gallery/bridge-desktop@2x.webp  2x">
+              <source type="image/webp" srcset="img/gallery/bridge-desktop.webp 1x, img/gallery/bridge-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/gallery/bridge-desktop.jpg 1x, img/gallery/bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/gallery/bridge-tablet.jpg 1x, img/gallery/bridge-tablet@2x.jpg 2x">
-              <img class="gallery__card-image" src="img/gallery/bridge-mobile.jpg" srcset="img/gallery/bridge-mobile@2x.jpg 2x" alt="Мост дьявола.">
+              <img class="gallery__card-image" src="img/gallery/bridge-mobile.jpg" srcset="img/gallery/bridge-mobile@2x.jpg 2x"
+                   alt="Мост дьявола.">
             </picture>
           </a>
           <div class="gallery__card-content">
@@ -146,10 +164,8 @@
             </div>
             <div class="gallery__card-likes">
               <button class="gallery__card-likes-button" type="button" aria-label="Мне нравится.">
-                <svg class="gallery__card-likes-svg" xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none">
-                  <path
-                    d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"
-                  />
+                <svg class="gallery__card-likes-svg" width="23" height="21" fill="none">
+                  <use href="img/sprite.svg#icon-like"/>
                 </svg>
               </button>
               <span class="visually-hidden">Количество лайков.</span>
@@ -161,14 +177,20 @@
     </section>
     <section class="video">
       <h2 class="video__header-title">Все еще сомневаетесь?</h2>
-      <p class="video__header-subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+      <p class="video__header-subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они&nbsp;<br
+        class="gallery__transfer"/> не подорожали в очередной
         раз!</p>
       <div class="video__player">
         <button class="video__button" type="button">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/gallery/video-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/gallery/video-tablet.jpg">
-            <img src="img/gallery/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
+            <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/gallery/video-desktop.webp 1x, img/gallery/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/gallery/video-tablet.webp 1x, img/gallery/video-tablet@2x.webp  2x">
+            <source type="image/webp" srcset="img/gallery/video-mobile.webp 1x, img/gallery/video-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/gallery/video-desktop.jpg 1x, img/gallery/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/gallery/video-tablet.jpg 1x, img/gallery/video-tablet@2x.jpg 2x">
+            <img src="img/gallery/video-mobile.jpg" srcset="img/gallery/video-mobile@2x.jpg 2x" alt="Видеопрезентация.">
           </picture>
           <span class="visually-hidden">Возспроизвести презентацию.</span>
         </button>
@@ -176,51 +198,39 @@
     </section>
   </main>
   <footer class="main-footer">
-    <a class="main-footer__link-hashtag" href="">#visitsedona</a>
+    <a class="main-footer__link-hashtag" href="#">#visitsedona</a>
     <ul class="main-footer__social social">
       <li class="social__item">
-        <a class="social__link social__link-vkontakte">
+        <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Мы в Вконтакте</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-            <g clip-path="url(#a)">
-              <path fill="#fff" fill-rule="evenodd"
-                    d="M23.45 5.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V5.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9c-.75 0-.9.35-.9.73 0 .68.89 4.07 4.14 8.55C6.32 17.34 9.38 19 12.15 19c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 18.22 19.4 19 20.41 19h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
-                    clip-rule="evenodd"/>
-            </g>
-            <defs>
-              <clipPath id="a">
-                <path fill="#fff" d="M0 0h24v24H0z"/>
-              </clipPath>
-            </defs>
+          <svg width="24" height="24" fill="none">
+            <use xlink:href="img/sprite.svg#icon-vkontakte"/>
           </svg>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link-telegram">
+        <a class="social__link social__link-telegram" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Мы в Телеграме</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-            <path fill="#fff"
-                  d="m22.44 4.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L7.01 13.32l-4.76-1.49c-1.04-.32-1.05-1.03.22-1.53L21.1 3.11c.87-.32 1.62.2 1.34 1.51Z"/>
+            <use xlink:href="img/sprite.svg#icon-telegram"/>
           </svg>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link-youtube">
+        <a class="social__link social__link-youtube" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Мы в Ютубе</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-            <path fill="#fff"
-                  d="M19.18 5H4.81C3.31 5 2 6.3 2 7.8v8.3C2 17.7 3.3 19 4.81 19h14.37A2.8 2.8 0 0 0 22 16.2V7.8c.1-1.5-1.2-2.8-2.8-2.8ZM9.03 15.4V8.6l6.84 3.4-6.84 3.4Z"/>
+            <use xlink:href="img/sprite.svg#icon-youtube"/>
           </svg>
         </a>
       </li>
     </ul>
     <div class="main-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="copyright__text">Разработано</p>
         <span class="visually-hidden">HTML Academy</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none">
-          <path fill="#000"
-                d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="currentColor">
+          <use xlink:href="img/sprite.svg#icon-academy"/>
         </svg>
       </a>
     </div>

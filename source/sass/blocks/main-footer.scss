@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 76px 0 45px;
+    margin: 0 60px 0 45px;
     padding: 36px 0;
   }
 
@@ -14,7 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 136px 0 104px;
+    margin: 0 121px 0 118px;
+    padding: 35px 0;
   }
 }
 
@@ -25,10 +26,24 @@
   line-height: 26px;
   font-weight: 700;
   color: $dark-black;
-  margin-top: 28px;
+  margin-top: 23px;
   margin-bottom: 34px;
 
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    color: $light-black;
+  }
+
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin: 3px 0 0 15px
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 4px 0 0 1px;
   }
 }
+
+

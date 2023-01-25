@@ -10,7 +10,6 @@
 
 .copyright__text {
   display: block;
-  color: $dark-black;
   margin: 0;
   margin-right: 12px;
 }
@@ -20,8 +19,17 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  color: $dark-black;
 
   @media (min-width: $tablet-width) {
     align-items: center;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    color: $light-black;
   }
 }
