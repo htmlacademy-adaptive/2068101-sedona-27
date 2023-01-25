@@ -1,9 +1,9 @@
 .advantages__intro {
   position: relative;
-  padding: 32px 18px;
+  padding: 34px 18px 26px;
 
   @media (min-width: $tablet-width) {
-    padding: 47px 124px 55px;
+    padding: 49px 124px 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,6 +25,13 @@
   color: $dark-black;
   margin: 0;
   margin-bottom: 35px;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin-bottom: 29px;
+  }
+
 }
 
 .description__subtitle {
@@ -47,9 +54,26 @@
   list-style: none;
   position: relative;
 
+  &--area {
+    @media (max-width: $mobile-width-only) {
+      padding: 24px 26px;
+    }
+  }
+
+  &--road {
+    @media (max-width: $mobile-width-only) {
+      padding: 25px 26px 24px;
+    }
+  }
+
+  &--tourists {
+    @media (max-width: $mobile-width-only) {
+      padding: 25px 26px 27px;
+    }
+  }
+
   &--grey {
     background-color: $grey;
-    padding: 24px 26px;
 
     @media (min-width: $tablet-width) {
       width: 33.33%;
@@ -57,13 +81,13 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding: 63px 50px 41px;
+      padding: 63px 50px 37px;
     }
   }
 
   &--decoration-text {
     @media (min-width: $tablet-width) {
-      padding: 41px 33px;
+      padding: 41px 40px;
     }
 
     @media (min-width: $desktop-width) {
@@ -117,15 +141,14 @@
 
 .advantages__big {
   background-color: $blue;
-  padding: 54px 18px 40px;
 
   @media (min-width: $tablet-width) {
-    padding: 52px 33px 31px;
+    padding: 52px 30px 31px;
     grid-area: text;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 52px 50px 51px;
+    padding: 52px 69px 31px;
   }
 }
 
@@ -142,6 +165,15 @@
   &--white {
     color: $white;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 45px;
+  }
 }
 
 .advantages__number {
@@ -153,12 +185,20 @@
   &--white {
     color: $white;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .advantages__description {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 8px;
+  }
 
   &--white {
     color: $white;
@@ -184,9 +224,12 @@
   }
 }
 
-.advantages__transfer {
+@media (max-width: $mobile-width-only) {
+  .advantages__big-bridge {
+    padding: 37px 18px;
+  }
 
-  @media (max-width: $mobile-width-only) {
-    display: none;
+  .advantages__big-city {
+    padding: 60px 18px 40px;
   }
 }

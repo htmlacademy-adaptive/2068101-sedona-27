@@ -1,5 +1,5 @@
 .page-search {
-  padding: 38px 18px 49px;
+  padding: 41px 18px 49px;
   text-align: center;
   text-transform: uppercase;
 
@@ -18,10 +18,11 @@
   font-weight: 700;
   color: $dark-black;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -41,13 +42,15 @@
 .page-search__hotel {
   display: inline-block;
   margin: 0 auto;
-  padding: 16px 49px;
+  padding: 16px;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
   font-weight: 700;
   color: $white;
   background-color: $blue;
   text-decoration: none;
+  min-width: 284px;
 
   &:hover {
     background-color: $blue-hover;
@@ -67,6 +70,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 121px;
+    padding: 16px;
+    width: 458px;
   }
 }

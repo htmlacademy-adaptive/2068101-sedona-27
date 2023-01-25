@@ -1,15 +1,35 @@
 .sublist__item {
   position: relative;
   list-style: none;
-  padding: 31px 18px 25px 65px;
+  padding: 33px 18px 0 65px;
 
   @media (min-width: $tablet-width) {
-    padding: 153px 33px 60px;
+    padding: 158px 33px 60px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     padding: 169px 50px 69px;
+  }
+
+  &--eat {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      padding: 156px 33px 61px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 166px 50px 71px;
+    }
+  }
+
+  &--gift {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      padding: 153px 33px 64px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 170px 50px 71px;
+    }
   }
 
   &::before {
@@ -27,8 +47,6 @@
       top: 60px;
       left: 50%;
       transform: translateX(-50%);
-      width: 77px;
-      height: 77px;
     }
 
     @media (min-width: $desktop-width) {
@@ -40,14 +58,48 @@
 
   &--house::before {
     background-image: url("../img/house.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 77px;
+      height: 72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 72px;
+    }
   }
 
   &--eat::before {
     background-image: url("../img/eat.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--gift::before {
     background-image: url("../img/gift.svg");
+
+    @media (max-width: $mobile-width-only) {
+      left: 18px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 66px;
+      height: 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 
@@ -59,9 +111,51 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin-bottom: 23px;
+  }
 }
 
 .sublist__description {
-  text-transform: uppercase;
   margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .sublist {
+    margin: 0 0 45px;
+  }
+
+}
+
+.sublist__transfer {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.sublist__transfer--desktop {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

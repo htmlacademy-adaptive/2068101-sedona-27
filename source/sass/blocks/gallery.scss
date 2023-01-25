@@ -1,12 +1,12 @@
 .gallery__header {
-  padding: 37px 20px 25px;
+  padding: 37px 20px 36px;
 
   @media (min-width: $tablet-width) {
-    padding: 66px 155px 67px;
+    padding: 66px 155px 80px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 371px 65px;
+    padding: 100px 371px 90px;
   }
 }
 
@@ -17,11 +17,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
   }
 }
 
@@ -33,7 +35,16 @@
   color: $dark-black;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .gallery__subtitle {
@@ -44,7 +55,7 @@
 
 .gallery__item {
   list-style: none;
-  padding: 24px 20px 25px;
+  padding: 24px 20px;
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $silver;
@@ -79,12 +90,20 @@
   display: block;
   width: 100%;
 
+
   @media (max-width: $mobile-width-only) {
     margin-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 324px;
+    min-height: 267px;
   }
 }
 
 .gallery__card-name {
+  font-family: $main-fonts;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: $dark-black;
@@ -93,6 +112,7 @@
 
   @media (min-width: $desktop-width) {
     color: $white;
+    padding-bottom: 5px;
   }
 }
 
@@ -109,7 +129,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    padding-top: 6px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
   }
 }
 
@@ -164,5 +188,19 @@
   @media (min-width: $desktop-width) {
     fill: $white;
     opacity: 1;
+  }
+}
+
+.gallery__transfer {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.gallery__card-wrapper {
+  @media (min-width: $desktop-width) {
+    padding-left: 5px;
   }
 }
