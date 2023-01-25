@@ -29,6 +29,14 @@
   margin-top: 23px;
   margin-bottom: 34px;
 
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    color: $light-black;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 3px 0 0 15px
   }
