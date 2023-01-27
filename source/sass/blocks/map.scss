@@ -1,11 +1,20 @@
-
 .map {
+  position: relative;
+
   @media (max-width: $mobile-width-only) {
     padding-bottom: 10px;
   }
 }
 
 .map__iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
   display: block;
   width: 100%;
   height: 350px;

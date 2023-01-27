@@ -1,6 +1,7 @@
 .social {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
   margin: 0 auto 40px;
   padding: 0;
   justify-content: center;
@@ -22,7 +23,6 @@
   margin: 0;
   padding: 0;
   align-items: center;
-
 }
 
 .social__link {
@@ -44,8 +44,4 @@
   &:active {
     background-color: $blue-active;
   }
-}
-
-.social__item:not(:last-child) {
-  margin-right: 6px;
 }

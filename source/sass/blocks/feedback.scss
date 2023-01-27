@@ -45,8 +45,6 @@
 }
 
 .feedback__form {
-
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +110,6 @@
 }
 
 .feedback__item-contact-wrapper {
-
   @media (min-width: $tablet-width) {
     margin-left: 18px;
   }
@@ -163,7 +160,6 @@
 }
 
 .feedback__item-attraction {
-
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
   }
@@ -319,7 +315,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--border::before {
       width: 280px;
     }
@@ -518,9 +513,7 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .feedback__transfer--desktop {
     display: block;
   }
 }
-

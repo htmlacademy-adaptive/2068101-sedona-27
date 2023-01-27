@@ -126,7 +126,6 @@
 }
 
 .gallery__card-likes {
-
   @media (min-width: $tablet-width) {
     display: flex;
     padding-top: 10px;
@@ -161,7 +160,6 @@
 }
 
 .gallery__card-content {
-
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;

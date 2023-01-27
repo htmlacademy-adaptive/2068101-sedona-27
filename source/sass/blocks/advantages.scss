@@ -31,7 +31,6 @@
     font-size: 21px;
     margin-bottom: 29px;
   }
-
 }
 
 .advantages__description-subtitle {
@@ -97,7 +96,6 @@
 }
 
 @media (max-width: $mobile-width-only) {
-
   .advantages__intro--triangle::after {
     position: absolute;
     content: "";
